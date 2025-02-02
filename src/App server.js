@@ -143,6 +143,17 @@ function App() {
 
   const Task = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+      if (id === undefined) return;
+
+      const taskItem = tasks.find((task) => task.id === id);
+      if (!taskItem) {
+        navigate("/404");
+      }
+    }, [id, tasks, navigate]);
+
     const taskItem = tasks.find((task) => task.id === id);
     if (!taskItem) return <div>Задача не найдена</div>;
 
