@@ -1,0 +1,285 @@
+/* Общие стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: rgb(233, 218, 239);
+}
+
+/* Стили для основного контейнера */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Стиль для главной страницы */
+.mainPageWitfTodoList {
+  text-align: center;
+}
+
+.search {
+  width: 60%;
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.filter-althabit-button,
+.filter-althabit-button-delete {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #6a4dff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px 10px;
+}
+
+.editTask-stepback {
+  width: 10%;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(30, 30, 30);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px 10px;
+}
+
+/* Обновленный стиль для .myListofTask */
+.myListofTask {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;  /* Добавляем 10px между элементами */
+  margin-top: 10px;
+  padding: 0 10px;  /* Добавляем отступы по бокам */
+}
+
+.myListofTask .title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.buttonTasks {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;  /* Добавляем 10px между кнопками */
+  margin-top: 10px;
+  width: 100%;
+}
+
+/* Ограничение ширины на десктопах, чтобы элементы не раздвигались */
+.myListofTask .title,
+.buttonTasks {
+  max-width: 600px;  /* Ограничиваем максимальную ширину */
+  width: 100%;  /* Занимают всю ширину доступного контейнера */
+}
+
+/* Добавляем адаптивность для десктопа */
+@media (min-width: 768px) {
+  .myListofTask {
+    flex-direction: row;  /* Для экрана >768px располагаем элементы в ряд */
+    justify-content: flex-start;
+    gap: 20px;  /* Увеличиваем расстояние между элементами в ряду */
+    margin: 0px 500px;
+  }
+
+  .buttonTasks {
+    gap: 5px;  /* Уменьшаем расстояние между кнопками на десктопах */
+  }
+}
+
+.filter-althabit-button:hover,
+.filter-althabit-button-delete:hover {
+  background-color: #5a3cc1;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 20px 0;
+}
+
+.buttonTasks button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #6a4dff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin: 10px 0;
+}
+
+.buttonTasks button:hover {
+  background-color: #5a3cc1;
+}
+
+hr {
+  margin-top: 20px;
+  border: 1px solid #000000;
+}
+
+/* Стиль для списка задач */
+.taskList {
+  margin-top: 30px;
+}
+
+.task {
+  padding: 15px;
+  background-color: white;
+  margin: 10px auto;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.task:hover {
+  background-color: #f8f8f8;
+}
+
+.task a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+.task a:hover {
+  color: #6a4dff;
+}
+
+/* Стиль для детальной страницы задачи */
+.task-detail {
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.task-detail-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.isTaskComplited {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+button.editTask {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff5c5c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+  margin-right: 10px; /* Отступ справа для кнопок */
+}
+
+button.editTask-update {
+  padding: 10px 20px;
+  border: none;
+  background-color: #66a464;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+  margin-right: 10px;
+}
+
+button.editTask:hover {
+  background-color: #e04f4f;
+}
+
+button.editTask-update:hover {
+  background-color: #599058;
+}
+
+button.save-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #6a4dff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* Отступ слева для кнопок */
+  margin-right: 10px;
+}
+
+button.save-button:hover {
+  background-color: #5a3cc1;
+}
+
+/* Стили для анимации загрузки */
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border-left-color: transparent !important;
+  border: 3px solid black;
+  animation: loader 1s infinite;
+}
+
+/* Анимация загрузки */
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Мобильные стили */
+  .task,
+  .task-detail {
+    width: 90%;
+  }
+
+  .search {
+    width: 100%;
+  }
+
+  .buttonTasks button,
+  .filter-althabit-button,
+  .filter-althabit-button-delete {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+
