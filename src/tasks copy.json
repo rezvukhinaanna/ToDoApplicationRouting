@@ -26,19 +26,9 @@
       "completed": false
     },
     {
-      "id": "d466",
-      "title": "my task",
-      "completed": false
-    },
-    {
-      "id": "f848",
-      "title": "amy task",
-      "completed": false
-    },
-    {
-      "id": "1a25",
-      "title": "amy task",
-      "completed": false
+      "title": "Посмотреть фильм",
+      "completed": false,
+      "id": "194c"
     }
   ]
 }
