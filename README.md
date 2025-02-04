@@ -1,4 +1,5 @@
 ### `npm start` - запуск приложения
+### `json-server --watch "tasks copy.json" --port 5000` - запуск сервера
 
 Переработанное приложение Список дел с JSON Server, без использования Firebase:
 
